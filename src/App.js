@@ -46,21 +46,6 @@ class App extends Component {
   )}
 
 
-       <Card>
-    <Image src={this.state.clubes[0].url} />
-    <Card.Content>
-      <Card.Header>
-      {this.state.clubes[0].club}
-      </Card.Header>
-      <Card.Meta>
-        <span className='date'>
-          Fundo en {this.state.clubes[0].año}
-        </span>
-      </Card.Meta>
-   
-   </Card.Content>
- 
-  </Card>
       
        </div>
     );
