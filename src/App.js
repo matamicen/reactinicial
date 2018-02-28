@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Club from './components/Club';
 
 class App extends Component {
 
@@ -55,9 +56,7 @@ class App extends Component {
         <input type="submit" value="Submit" />
       </form>
 
-       <h1>Club: {this.state.club}</h1>
-
-       <img src ={this.state.url} />
+       <Club club={this.state.club} url={this.state.url} />
        </div>
     );
   }
