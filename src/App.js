@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Club from './components/Club';
+import { Button, Checkbox, Form } from 'semantic-ui-react'
 
 class App extends Component {
 
@@ -23,6 +24,7 @@ class App extends Component {
   handleChange(event) {
     this.setState({[event.target.name]: event.target.value});
    // console.log(event.target.value + event.target.name);
+   
   }
 
   handleSubmit(event) {
@@ -36,25 +38,36 @@ class App extends Component {
     //console.log(this.state.value);
     return (
       <div>
-      <form onSubmit={this.handleSubmit}>
+         <Form onSubmit={this.handleSubmit}>
+    {/*}  <form onSubmit={this.handleSubmit}> */}
+    <Form.Field>
         <label>
           Nombre:
           <input type="text" name="nombre" value={this.state.nombre} onChange={this.handleChange} />
         </label>
+    </Form.Field>
+    <Form.Field>
         <label>
-          Apellido:
+           Apellido:
           <input type="text" name="apellido" value={this.state.apellido} onChange={this.handleChange} />
         </label>
+        </Form.Field>
+    <Form.Field>
         <label>
           Sexo:
           <input type="text" name="sexo" value={this.state.sexo} onChange={this.handleChange} />
         </label>
+        </Form.Field>
+        <Form.Field>
         <label>
           Club:
           <input type="text" name="club" value={this.state.club} onChange={this.handleChange} />
         </label>
-        <input type="submit" value="Submit" />
-      </form>
+        </Form.Field>
+        <Button  type="submit">Submit</Button>
+      </Form>
+
+
 
        <Club club={this.state.club} url={this.state.url} />
        </div>
