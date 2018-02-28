@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Myform from './components/Myform';
-import { Card, Icon, Image } from 'semantic-ui-react';
+
 
 
 class App extends Component {
@@ -25,28 +25,10 @@ class App extends Component {
     return (
       <div>
   
-       <Myform />
+       <Myform lalista={this.state.clubes}/>
+       
 
-       {this.state.clubes.map( (m) => 
-       <Card>
-    <Image src={m.url} />
-    <Card.Content>
-      <Card.Header>
-      {m.club}
-      </Card.Header>
-      <Card.Meta>
-        <span className='date'>
-          Fundo en {m.año}
-        </span>
-      </Card.Meta>
-   
-   </Card.Content>
- 
-  </Card>
-  )}
-
-
-      
+            
        </div>
     );
   }

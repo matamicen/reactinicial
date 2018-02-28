@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
 import Club from './Club';
+import Listaclubes from './Listaclubes';
 
 class Myform extends Component {
 
@@ -67,14 +68,14 @@ this.handleSubmit = this.handleSubmit.bind(this);
           <Club club={this.state.club} url={this.state.url} />
           </Form.Field>
           <Button  type="submit">Submit</Button>
+          <Form.Field>
+          <Listaclubes lalista={this.props.lalista} />
+          </Form.Field>
+
+
         </Form>
 
-        
-        
-       /* <div>
-        <Club club={this.state.club} url={this.state.url} />
-         </div>
-    */
+               
     );
   }
 }
